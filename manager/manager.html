@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Iconic Bookmarks</title>
+<link rel="stylesheet" href="../lib/shared.css">
+<link rel="stylesheet" href="manager.css">
+</head><body>
+<aside id="side"></aside>
+<section id="content">
+  <header id="bar">
+    <div id="crumb"></div>
+    <div class="actions">
+      <div class="seg" id="seg">
+        <button data-v="grid">Grid</button><button data-v="list">List</button><button data-v="canvas">Canvas</button>
+      </div>
+      <button id="newFolder">+ Folder</button>
+      <button id="newMark" class="primary">+ Bookmark</button>
+      <button id="launch" title="Search">Search<span class="kbd">Ctrl K</span></button>
+      <button id="export">Export</button>
+      <button id="import">Import</button>
+      <input type="file" id="importFile" accept=".json" hidden>
+    </div>
+  </header>
+  <div id="main"></div>
+</section>
+<div id="ctx" class="menu" hidden></div>
+<dialog id="props"><form method="dialog">
+  <h3 id="pt"></h3>
+  <label>Title<input id="ptitle"></label>
+  <label id="purlL">URL<input id="purl"></label>
+  <menu><button value="cancel">Cancel</button><button value="ok" class="primary">Save</button></menu>
+</form></dialog>
+<div id="launcher" hidden>
+  <div class="box">
+    <input id="lq" placeholder="Search bookmarks &amp; folders…">
+    <div id="lres"></div>
+  </div>
+</div>
+<script type="module" src="manager.js"></script>
+</body></html>

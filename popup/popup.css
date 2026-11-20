@@ -1,0 +1,17 @@
+body{width:400px;min-height:320px;max-height:580px;display:flex;flex-direction:column}
+header{display:flex;gap:6px;padding:10px 12px;align-items:center;background:var(--bg2);border-bottom:1px solid var(--line)}
+header button{padding:5px 10px}
+header #crumb{flex:1;display:flex;gap:4px;padding:0;font-weight:600;overflow:hidden;white-space:nowrap;font-size:14px}
+#crumb a{cursor:pointer;color:var(--mut)}#crumb a:last-child{color:var(--fg)}#crumb a:hover{color:var(--acc2)}
+#back{font-size:15px;line-height:1}
+#grid{display:flex;flex-wrap:wrap;padding:8px 6px;overflow-y:auto;flex:1;align-content:flex-start}
+#grid .tile{width:92px;padding:10px 4px 8px}
+#grid .icon{--s:54px}
+#grid.list{flex-direction:column;flex-wrap:nowrap;gap:2px;padding:8px}
+#grid.list .tile{flex-direction:row;width:100%;gap:12px;padding:5px 10px;text-align:left}
+#grid.list .tile>span{text-align:left;flex:1}
+#grid.list .icon{--s:34px}
+#grid.list .tile .edit{position:static}
+footer{padding:10px 12px;background:var(--bg2);border-top:1px solid var(--line)}
+footer button{width:100%;padding:10px}
+.empty{color:var(--mut);padding:30px;width:100%;text-align:center}

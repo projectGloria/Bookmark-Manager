@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Iconic Bookmarks",
+  "version": "1.0.0",
+  "description": "Bookmark manager where any picture can be the icon of a bookmark or folder. Icon grid, spatial canvas, Ctrl+K launcher.",
+  "minimum_chrome_version": "110",
+  "permissions": ["bookmarks", "storage", "unlimitedStorage", "tabs", "activeTab", "favicon", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Iconic Bookmarks",
+    "default_popup": "popup/popup.html"
+  },
+  "options_page": "manager/manager.html",
+  "background": { "service_worker": "background.js", "type": "module" },
+  "commands": {
+    "open-launcher": {
+      "suggested_key": { "default": "Ctrl+Shift+K" },
+      "description": "Open the icon launcher"
+    }
+  }
+}
